@@ -1,7 +1,4 @@
-RTIViewer
-~~~~~~~~~
-
-This software is available under the Gnu General Public License version 3.
+From: http://culturalheritageimaging.org/What_We_Offer/Downloads/View/
 
 This tool, designed for cultural heritage and natural science application, was
 primarily developed by the Italian National Research Council's (CNR) Institute
@@ -19,23 +16,3 @@ volunter efforts and private contributions. The Bookmarks feature added in the
 1.1 release is based on work done by Leif Isaksen of the University of
 Southampton, UK. We would especially like to acknowledge the work of Ronald
 Bourret and Gianpaolo Palma for the development work for this release.
-
-http://culturalheritageimaging.org/What_We_Offer/Downloads/View/
-
-
-How to compile RTIViewer
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-To compile RTIViewer you need a C++ compiling environment and the following
-libraries:
-- Qt 4.7 (http://www.qtsoftware.com/downloads).
-- the VCG libraries
-
-The compiling step depends on the compiling environment. Using GCC (both under
-linux and using the mingw gcc provided with the free Qt distribution) you
-should just type:
-
-git submodule init
-git submodule update
-qmake -recursive rtiviewerv10.pro
-make
