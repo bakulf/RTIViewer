@@ -6,7 +6,7 @@ DESTDIR        = bin
 CONFIG         += qt debug_and_release network console warn_off
 
 QT             += xml
-
+greaterThan(QT_MAJOR_VERSION, 4): QT += core gui widgets http
 MOC_DIR        = moc
 
 win32-msvc2005:QMAKE_LFLAGS   += /LARGEADDRESSAWARE
