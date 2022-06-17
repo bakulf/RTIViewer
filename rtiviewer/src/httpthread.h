@@ -29,7 +29,7 @@
 
 #include <QThread>
 #include <QUrl>
-#include <QHttp>
+#include <QtHttp>
 #include <QBuffer>
 #include <QMutex>
 #include <QWaitCondition>
