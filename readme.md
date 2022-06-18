@@ -1,5 +1,4 @@
-RTIViewer
-~~~~~~~~~
+# RTIViewer
 
 This software is available under the Gnu General Public License version 3.
 
@@ -20,22 +19,45 @@ volunter efforts and private contributions. The Bookmarks feature added in the
 Southampton, UK. We would especially like to acknowledge the work of Ronald
 Bourret and Gianpaolo Palma for the development work for this release.
 
-http://culturalheritageimaging.org/What_We_Offer/Downloads/View/
+[More Info](http://culturalheritageimaging.org/What_We_Offer/Downloads/View/)
 
-
-How to compile RTIViewer
-~~~~~~~~~~~~~~~~~~~~~~~~
+## How to compile RTIViewer
 
 To compile RTIViewer you need a C++ compiling environment and the following
 libraries:
-- Qt 4.7 (http://www.qtsoftware.com/downloads).
+
+- Qt 5
+- QtHttp Addon
 - the VCG libraries
 
-The compiling step depends on the compiling environment. Using GCC (both under
-linux and using the mingw gcc provided with the free Qt distribution) you
-should just type:
+The compiling steps depends on the compiling environment. The following instruction is based on Ubuntu 20.04 LTS.
 
+### Step 1: Install Qt 5
+```bash
+sudo apt install qt5-default
+```
+you can check [the official website instructions](https://wiki.qt.io/Install_Qt_5_on_Ubuntu) for more info.
+
+### Step 2: Install QtHttp Addon
+The QtHttp class is not public in Qt 5. Thus it must be installed as an addon.
+
+```bash
+git clone https://code.qt.io/cgit/qt/qthttp.git/
+cd qthttp/
+qmake
+make -j8
+sudo make install
+```
+### Step 3: Build RTIViewer
+```bash
+git clone https://github.com/mobinseven/RTIViewer.git
+cd RTIViewer
 git submodule init
 git submodule update
 qmake -recursive rtiviewerv10.pro
-make
+make release -j8
+```
+If all goes well, RTIViewer can run with this command:
+```
+./rtiviewer/src/bin/RTIViewer
+```

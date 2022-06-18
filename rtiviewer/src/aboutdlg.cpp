@@ -61,11 +61,11 @@ void AboutDlg::retranslateUi()
 {
     // Translate the UI strings
 
-    this->setWindowTitle(QApplication::translate("aboutDialog", getAboutDialogTitle(), 0, QApplication::UnicodeUTF8));
-    titleLabel->setText(QApplication::translate("aboutDialog", getTitleHTML(), 0, QApplication::UnicodeUTF8));
-    gplLabel->setText(QApplication::translate("aboutDialog", getGplHTML(), 0, QApplication::UnicodeUTF8));
-    guideLabel->setText(QApplication::translate("aboutDialog", getGuideHTML(), 0, QApplication::UnicodeUTF8));
-    descLabel->setText(QApplication::translate("aboutDialog", getDescHTML(), 0, QApplication::UnicodeUTF8));
+    this->setWindowTitle(QApplication::translate("aboutDialog", getAboutDialogTitle(), 0));
+    titleLabel->setText(QApplication::translate("aboutDialog", getTitleHTML(), 0));
+    gplLabel->setText(QApplication::translate("aboutDialog", getGplHTML(), 0));
+    guideLabel->setText(QApplication::translate("aboutDialog", getGuideHTML(), 0));
+    descLabel->setText(QApplication::translate("aboutDialog", getDescHTML(), 0));
 }
 
 /*====================================================================

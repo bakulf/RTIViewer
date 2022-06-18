@@ -5,7 +5,7 @@ CONFIG += qt debug_and_release xml network opengl warn_off #consol
 
 DESTDIR = bin
 QT += opengl xml network
-
+greaterThan(QT_MAJOR_VERSION, 4): QT += core gui widgets http
 UI_DIR = ui
 MOC_DIR = moc
 
