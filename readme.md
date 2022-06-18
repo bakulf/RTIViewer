@@ -51,12 +51,13 @@ sudo make install
 ### Step 3: Build RTIViewer
 ```bash
 git clone https://github.com/mobinseven/RTIViewer.git
+cd RTIViewer
 git submodule init
 git submodule update
 qmake -recursive rtiviewerv10.pro
 make release -j8
 ```
-If all goes well the RTIViewer can run with this command:
+If all goes well, RTIViewer can run with this command:
 ```
 ./rtiviewer/src/bin/RTIViewer
 ```
